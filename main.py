@@ -5,7 +5,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 
-url = "https://store.tcgplayer.com/collection?utm_campaign=18149059402&utm_source=google&utm_medium=cpc&utm_content=&utm_term=&adgroupid=&gclid=Cj0KCQiAuqKqBhDxARIsAFZELmJuDZ_ls6gqtQHcvZJCc9laiTZG6_xUJZ0yes2sNZcXOXve27yosPsaAmlOEALw_wcB"
+url = "https://store.tcgplayer.com/collection"
 
 
 def get_website(driver, url: str):
