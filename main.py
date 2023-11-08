@@ -60,9 +60,11 @@ def login(driver, username: str, password: str):
 if __name__ == "__main__":
     driver = webdriver.Chrome()
     time.sleep(5)
+    username = input("Enter your TCG Player Username: ")
+    password = input("Enter your TCG Player Password: ")
     while True:
-        username = input("Enter your TCG Player Username: ")
-        password = input("Enter your TCG Player Password: ")
         print("we will not store your login credentials")
         get_website(driver, url)
         login(driver, username, password)
+
+        time.sleep(60 * 60)
