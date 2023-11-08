@@ -1,15 +1,26 @@
 import time
+from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 
+import requests
+
 url = "https://store.tcgplayer.com/collection"
 
 
 def get_website(driver, url: str):
     driver.get(url)
+    page_source = driver.page_source
+    soup = BeautifulSoup(page_source, "lxml")
+    print("soup test 1")
+    print(soup)
+    text = requests.get(url).text
+    soup2 = BeautifulSoup(text, "lxml")
+    print("soup test 2")
+    print(soup2)
 
 
 def login(driver, username: str, password: str):
